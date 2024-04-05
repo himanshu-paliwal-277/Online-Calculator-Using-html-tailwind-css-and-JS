@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Calculator</title>
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- website logo -->
+    <link
+      rel="shortcut icon"
+      href="./Assets/image (17).png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div
+      class="flex justify-center items-center w-full h-screen bg-gradient-to-r from-cyan-500 to-blue-500"
+    >
+      <!-- logo -->
+      <div
+        class="absolute top-5 left-5 flex-col justify-center items-center hidden sm:flex"
+      >
+        <img class="w-20" src="./Assets/image (17).png" alt="logo" />
+        <span class="text-lg font-semibold text-white">Online Calculator</span>
+      </div>
+      <!-- calulator div -->
+      <div class="bg-black w-[370px] px-2 pt-8 pb-3 rounded-xl">
+        <div class="m-2 mb-6 text-white">
+          <input
+            id="input"
+            value="0"
+            class="text-3xl rounded bg-gray-600 text-end px-2 w-full py-3"
+            type="text"
+            placeholder="0"
+            autocomplete="off"
+          />
+        </div>
+        <div class="flex flex-wrap text-xl text-white">
+          <div class="w-1/4 h-16 p-[3px]">
+            <button id="reset_button" class="calculator_button">AC</button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button id="calculate_sqrt_button" class="calculator_button">
+              √x
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button class="calculator_button">%</button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              /
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              7
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              8
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              9
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button
+              onclick="entering_value(this)"
+              class="calculator_button text-2xl"
+            >
+              *
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              4
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              5
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              6
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button
+              onclick="entering_value(this)"
+              class="calculator_button text-2xl"
+            >
+              -
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              1
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              2
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              3
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button
+              onclick="entering_value(this)"
+              class="calculator_button text-2xl"
+            >
+              +
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button id="change_sign_button" class="calculator_button">
+              +/−
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              0
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button onclick="entering_value(this)" class="calculator_button">
+              .
+            </button>
+          </div>
+          <div class="w-1/4 h-16 p-[3px]">
+            <button
+              id="calculate_button"
+              class="flex justify-center items-center rounded w-full h-full bg-blue-300 hover:bg-blue-400 text-3xl text-black"
+            >
+              =
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./script.js"></script>
+  </body>
+</html>
