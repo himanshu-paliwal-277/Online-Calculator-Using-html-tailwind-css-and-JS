@@ -6,11 +6,11 @@ let change_sign_button = document.getElementById("change_sign_button");
 let calculation_preview = document.getElementById("calculation_preview");
 let calculator_button = document.querySelectorAll(".calculator_button");
 let input_value;
-let click_sound = new Audio("./Assets/click-button-sound.wav");
+// let click_sound = new Audio("./Assets/click-button-sound.mp3");
 
 // function to take input and display in input section of calculator
 function entering_value(element) {
-  click_sound.play();
+  // click_sound.play();
   input_value = input.value;
   if (input.value === "0" && element.innerText === "0") {
     return;
@@ -77,7 +77,7 @@ calculator_button.forEach((element) => {
 
 // This function is delete the last element of string when user click back button
 function delete_last_element() {
-  click_sound.play();
+  // click_sound.play();
   input_value = input.value;
   input_value = input_value.slice(0, -1);
   input.value = input_value;
@@ -93,7 +93,7 @@ function calculate() {
   let expression = input.value;
   let result = eval(expression);
   input.value = result;
-  click_sound.play();
+  // click_sound.play();
   calculation_preview.innerText = "";
 }
 
@@ -103,7 +103,8 @@ calculate_button.addEventListener("click", calculate);
 reset_button.addEventListener("click", () => {
   input.value = "0";
   input_value = 0;
-  click_sound.play();
+  // click_sound.play();
+  calculation_preview.innerText = "";
 });
 
 // preveting the character input
@@ -146,7 +147,7 @@ calculate_sqrt_button.addEventListener("click", () => {
   let result = Math.sqrt(input_value);
   // result = result.toFixed(13);
   input.value = result;
-  click_sound.play();
+  // click_sound.play();
   calculation_preview.innerText = "";
 });
 
@@ -154,5 +155,5 @@ calculate_sqrt_button.addEventListener("click", () => {
 change_sign_button.addEventListener("click", () => {
   input_value = 0 - input.value;
   input.value = input_value;
-  click_sound.play();
+  // click_sound.play();
 });
